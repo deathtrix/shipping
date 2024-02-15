@@ -1,0 +1,20 @@
+@host = localhost:8080
+
+###
+
+GET http://{{host}}/health
+
+###
+
+GET http://{{host}}/api/v1/packages/251
+
+###
+
+GET http://{{host}}/api/v1/sizes
+
+###
+
+PUT http://{{host}}/api/v1/sizes
+Content-Type: application/json
+
+[250, 500, 1000, 2000, 5000]
