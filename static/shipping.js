@@ -16,6 +16,7 @@ function calculatePacks() {
         .then(packs => {
             results = document.getElementById("items-results");
             results.innerHTML = "";
+            packSizes = packSizes.sort(function(a, b){return a - b});
             for (let i = 0; i < packs.length; i++) {
                 if (packs[i] > 0) {
                     results.innerHTML += "<tr><td>" + packs[i] + "</td><td>" + packSizes[i] + "</td></tr>";
